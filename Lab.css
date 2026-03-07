@@ -30,3 +30,27 @@ Focus on applying proper CSS techniques such as:
 - Alignment
 
 */
+
+ul{
+    list-style-type:none;
+    white-space:nowrap;
+    overflow-x:auto;
+}
+
+li{
+    display:inline;
+}
+
+.coffeeVideo {
+   height: 450px;
+   width: 700px;
+}
+
+.coffee h2{
+   align-items: center;
+}
+
+body{
+   background-color: #fffdd0;
+   font-family: sans-serif;
+}
