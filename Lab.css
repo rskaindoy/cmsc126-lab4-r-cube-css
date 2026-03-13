@@ -44,7 +44,7 @@ body.order a[href="#bottomPage"]{
    float: left;
    text-align: right;
    width: 100%;
-   background-color: #6b3e26;
+   background-color: #e339a7;
    margin-left: 0 !important;
    margin-right: 0 !important;
    margin-bottom: 0; 
@@ -89,7 +89,7 @@ body.order header #title {
    height: 5vh;
    position: sticky; /* scrolls with the page until threshold */
    top: 0; /* stays at top*/
-   background-color: rgb(27, 66, 18);
+   background-color: #0e2933;
    display: flex;
    justify-content: flex-end; /* align links to right */
    align-items: center; /* center vertically */
@@ -112,8 +112,7 @@ body.order header #title {
 
 
 body{
-   background: linear-gradient(#FDF6F0 0%, #3D1F13 100%); /*#1f2a24; #fdf6f0 soft cream background*/ /*#6b3e26 */
-   color: var(--coffee-dark);
+   background: #FDF6F0; /*linear-gradient(#FDF6F0 0%, #3D1F13 100%); #1f2a24; #fdf6f0 soft cream background*/ /*#6b3e26 */
 }
 
 body.order {
@@ -125,24 +124,18 @@ body.order {
 /* menu */
 
 .order #tagline {
-   text-align: center;
+   text-align: left;
    font-size: 20px;
    font-style: italic;
-   margin-bottom: 10px;
-   color: #5a2a0a; /* coffee-brown */
-   display: block;
-   margin-bottom: 30px;
-}
-
-.order .coffee {
    margin: 20px;
-   
+   display: block;
+   color: #f5f5f5;
+   text-shadow: 0 0 2px rgba(255,255,255,0.8), 0 0 6px rgba(255,255,255,.2);
 }
-
 
 /* chalkboard table */
-.order #coffee_choices, .order .coffee h2 {
-   width: 100%; /* Ensures the table spans the width of its container */
+.order div:nth-of-type(2) {
+   width: 80%; /* Ensures the table spans the width of its container */
    border-collapse: separate;
    border-spacing: 20px 10px;
    padding: 0px 30px;
@@ -152,32 +145,36 @@ body.order {
    outline: 5px solid #3d2614;
    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
    text-align: center;
+   overflow:scroll;
+   margin: 30px auto;
 }
 
 /* Titles stay normal */
-.order .coffee h2{
-   text-align: center;
-   text-shadow: 0 0 4px rgba(255, 255, 255, 0.4), 0 0 6px rgba(255,255,255,.2);
-   color: #fff2a8;
-   font-size: 42px;     
-   font-weight: bold;  
-   letter-spacing: 4px;
-   padding: 20px 0;
-   margin: 20px auto; 
-   height: 40px;
-   width: 75%;
-}
+
 
 .order #coffee_choices .coffeeTitle{
    text-align: center;
    text-transform: uppercase;
    text-shadow: 0 0 4px rgba(255, 255, 255, 0.4), 0 0 6px rgba(255,255,255,.2);
    color: #fff2a8;
+   background: transparent;
    font-size: 42px;     
    font-weight: bold;  
    letter-spacing: 4px; 
    padding: 50px 0 10px 0;
    height: 100px;
+   border-top: 3px dashed #ddd;
+}
+
+.order h2{
+   text-align: left;
+   text-shadow: 0 0 4px rgba(255, 255, 255, 0.4), 0 0 6px rgba(255,255,255,.2);
+   color: #fff2a8;
+   background: transparent;
+   font-size: 70px; 
+   font-weight: bold;  
+   letter-spacing: 4px;  
+   margin: 20px 20px; 
 }
 
 
@@ -198,6 +195,8 @@ body.order {
    object-fit: cover;
    border-radius: 20px;
    border: 6px solid white;
+   /* border-image: linear-gradient(to bottom, #e339a7 0%, #ab42b7 100%) 1;*/
+   
    background:rgba(255,255,255,0.05);
    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
    margin-bottom: 10px;
@@ -229,10 +228,12 @@ body.order {
 
 /* form; receipt like */
 
+
+
 .coffee form {
    max-width: 800px;
    margin: 100px auto;
-   padding: 30px 25px;
+   padding: 30px 50px;
    background-color: #fffdf8;       /* receipt paper */
    border: 2px dashed #c9b8a4;
    border-radius: 6px;
@@ -295,4 +296,37 @@ body.order {
    display: block;
    margin-top: 20px;
    border-bottom: 3px dotted #c9b8a4;
+}
+
+/*-----------------Footer-----------------*/
+body.order footer {
+  order: 100;
+  background-color: #0e2933; 
+  color: white;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+body.order footer p:first-of-type {
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+body.order footer .contacts {
+  margin: 15px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body.order footer p:last-of-type {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 10px 0 0 0;
 }
