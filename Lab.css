@@ -1,32 +1,244 @@
 /*
-LABORATORY EXERCISE #4
-
-Objective:
-Edit this CSS file to design and style the different web pages.
-
-Important:
-You are NOT allowed to modify or change any of the HTML files.
-All design and layout changes must be done using CSS only.
-
-Guidelines:
-1. Some elements do not have classes or IDs (for example, the list of steps in making coffee).
-   To style these elements, use contextual selectors, element selectors,
-   attribute selectors, or other appropriate CSS selector techniques.
-
-2. Before writing your CSS, it is highly recommended to create a simple
-   wireframe or layout plan. This will help you organize your design,
-   improve consistency, and ensure that all members of your group
-   are aligned and on the same page regarding the overall design.
-
-3. You are not required to style every single class or ID.
-   Your main goal is to create a website that is visually appealing,
-   well-organized, and user-friendly.
-
-Focus on applying proper CSS techniques such as:
-- Typography
-- Spacing (margin and padding)
-- Layout
-- Colors
-- Alignment
-
+<----------------NAV BAR---------------->
 */
+.navBar {
+  width: 100%;
+  height: 5vh;
+  position: sticky;
+  top: 0; /* stays at top*/
+  background-color: rgb(27, 66, 18);
+  display: flex;
+  justify-content: flex-end; /* align links to right */
+  align-items: center; /* center vertically */
+  gap: 30px;
+  padding-right: 30px;
+  z-index: 1000;
+}
+
+.navBar a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #a5a5a4;
+}
+
+/* Hover effect */
+.navBar a:hover,
+.navBar a:active {
+  color: rgb(233, 104, 126);
+}
+
+/*----------------Home layout--------------------*/
+
+body.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* banner */
+body.home #banner {
+  order: 0;
+}
+
+
+
+/* first definition (Coffee is a beverage...) */
+body.home .coffee:nth-of-type(3) {
+  order: 1;
+}
+
+/* steps */
+body.home .coffee:nth-of-type(2) {
+  order: 2;
+}
+
+/* image */
+body.home .coffee:nth-of-type(4) {
+  order: 3;
+}
+
+/* last definition / history + back to top */
+body.home .coffee:nth-of-type(5) {
+  order: 4;
+}
+
+/* footer */
+body.home footer {
+  order: 100;
+}
+
+body.home .coffee:nth-of-type(5) a {
+  display: block;
+  margin-top: 40px;
+  margin-left: 40px;
+  color: rgb(77, 53, 10);
+}
+
+/*-----------------Banner layout-----------------*/
+
+body.home #banner {
+  object-fit: cover;
+  clip-path: inset(0 28% 0 0); /*crop right*/
+  overflow: hidden;
+  width: 141%;
+  max-width: 141%;
+  height: 60vh;
+  margin: 0;
+}
+
+body.home header #title {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  max-height: 18%;
+  max-width: 40%;
+  z-index: 2;
+}
+
+body.home #welcome {
+  position: absolute;
+  top: 16%;
+  left: 5%;
+  max-width: 40%;
+  z-index: 20;
+}
+
+body.home #orderCoffee {
+  position: absolute;
+  top: 21%;
+  left: 5%;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: rgb(27, 66, 18);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+body.home a[href="#bottomPage"]{
+  display: block;
+  margin-left: 40px;
+  color: rgb(77, 53, 10);
+}
+
+/*<----------- outer Home style of elements----------->*/
+
+body.home {
+  margin: 0 auto;
+  background-color: #fffdd0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 21px;
+  color: rgb(189, 152, 97);
+}
+
+/*<----------- Banner style of elements----------->*/
+
+body.home header #title {
+  color: white;
+  font-size: 2.5rem;
+}
+
+body.home #welcome {
+  color: white;
+}
+
+/*------------Home elements----------------*/
+body.home .definition {
+  width: 80%;
+  padding: 15px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  font-size: 1.3rem;
+  text-align: justify;
+  text-align-last: left;
+  padding: 30px;
+}
+
+body.home .definition .emphasis {
+  font-weight: bold;
+  color: rgb(27, 66, 18);
+  font-style: italic;
+}
+
+body.home .coffee:nth-of-type(2) {
+  /*steps*/
+  background-color: rgb(118, 81, 48);
+  color: rgb(236, 236, 236);
+  margin-left: 680px;
+  width: 59%;
+  padding: 20px;
+  z-index: 20;
+}
+
+body.home .coffee:nth-of-type(4) {
+  /*image*/
+  position: absolute;
+  top: 1153px; /* adjust until it aligns with steps */
+  width: 400px;
+  height: 800px;
+  object-fit: cover;
+  transform: scale(1.2);
+  z-index: 50;
+}
+
+body.home .coffee:nth-of-type(4) img {
+  width: 150%;
+  height: 670px; 
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+body.home .coffee:nth-of-type(2) h2 {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+body.home .coffee:nth-of-type(2) ol {
+  width: 88%;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+body.home .coffee:nth-of-type(2) li {
+  margin-bottom: 25px;
+  margin-left: 0;
+  width: auto;
+  max-width: 100%;
+  font-size: 0.8rem;
+}
+
+/*-----------------Footer-----------------*/
+body.home footer {
+  order: 100;
+  background-color: rgb(27, 66, 18); 
+  color: white;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+body.home footer p:first-of-type {
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+body.home footer .contacts {
+  margin: 15px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body.home footer p:last-of-type {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 10px 0 0 0;
+}
