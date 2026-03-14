@@ -29,14 +29,57 @@ Focus on applying proper CSS techniques such as:
 - Colors
 - Alignment
 
+/* <---------------- COMMON STYLES ----------------> */
+
+body{
+   background: bisque; /* #1f2a24; #fdf6f0 soft cream background*/ /*#6b3e26 */
+   overflow-x: clip;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* common colors */
+:root{
+  --one: #2c1800; /* section bg, normal text*/
+  --two: #e9687e; /* text effects */
+  --three: #f5f5f5; /* nav text*/
+}
+
+body.about a[href="#bottomPage"],
+body.about a[href="#title"],
+body.order a[href="#bottomPage"],
+body.order a[href="#title"]{
+   display: block;
+   margin-left: 40px;
+   margin-top: 13px;
+   color: --var(one);
+}
+
+body.about #banner, body.order #banner {
+   display: block;
+   max-height: 200px;
+   width: 100%;
+   object-fit: cover;
+   gap: 0; 
+   z-index: 1;
+}
+
+body.about header #title, body.order header #title {
+   position: absolute;
+   top: 18%;
+   left: 2%;
+   z-index: 2;
+   color: white;
+   padding: 4px;
+   font-family: Garamond, serif;
+   font-size: 60px;
+   text-shadow: 0px 0px 11px black !important;
+}
+
+hr, br {
+  display: none !important;
+}
 
 /* <----------------NAV BAR----------------> */
-
-:root{
-  --section: #2c1800;
-  --bg1: #fffdd0;
-  --bg2: #f3f1c7; 
-}
 
 .navBar{
    margin: 0;
@@ -45,7 +88,7 @@ Focus on applying proper CSS techniques such as:
    height: 9vh;
    position: sticky; /* scrolls with the page until threshold */
    top: 0; /* stays at top*/
-   background-color: #0e2933;
+   background-color: var(--one);
    box-shadow: 0 10px 20px rgba(0,0,0,0.7);
    display: flex;
    justify-content: flex-end; /* align links to right */
@@ -59,13 +102,13 @@ Focus on applying proper CSS techniques such as:
 .navBar a { 
    text-decoration: none;
    font-size: 25px;
-   color: #a5a5a4;
+   color: var(--three);
 }
 
 /* Hover effect */
 .navBar a:hover,
 .navBar a:active {
-  color: rgb(233, 104, 126);
+  color: var(--two); /* #e339a7 */
 }
 
 /* <---------------- FOOTER ----------------> */
@@ -79,7 +122,6 @@ footer {
   width: 100%;
   box-sizing: border-box;
   padding: 30px 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 18px;
   line-height: 1.8;
   margin-top: 20px;
@@ -101,10 +143,6 @@ footer p:last-of-type {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
   margin: 10px 0 0 0;
-}
-
-body{
-   background: linear-gradient(to bottom, var(--bg1), var(--bg2), var(--bg1)); /* #1f2a24; #fdf6f0 soft cream background*/ /*#6b3e26 */
 }
 
 /*-------------------- HOME PAGE ------------------------>*/
@@ -152,10 +190,6 @@ body.home .coffee:nth-of-type(5) a {
 
 /*-----------------Home banner layout-----------------*/
 
-hr {
-  display: none;
-} /*hide line*/
-
 body.home #banner {
   object-fit: cover;
   clip-path: inset(0 28% 0 0); /*crop right*/
@@ -163,7 +197,7 @@ body.home #banner {
   width: 139%;
   height: 95vh;
   margin: 0;
-  margin-top:-5vh;
+  margin-top: -5vh;
   /*cutout bottom */
   background: #fffdd0;
   border-bottom-right-radius: 50% 100%;
@@ -212,9 +246,8 @@ body.home a[href="#bottomPage"] {
 
 body.home {
   margin: 0 auto;
-  font-family:"";
   font-size: 23px;
-  color: rgb(189, 152, 97);
+  color: --var(one);
 }
 
 /*<----------- Home Banner style  ----------->*/
@@ -222,6 +255,7 @@ body.home {
 body.home header #title {
   color: white;
   font-size: 2.8rem;
+  font-family: Garamond, serif;
 }
 
 body.home #welcome {
@@ -374,27 +408,8 @@ body.home .coffee:nth-of-type(4) {
 
 /*-------------------- ORDER PAGE ------------------------>*/
 
-body.order a[href="#bottomPage"] {
-  color: white;
-  float: left;
-  text-align: right;
-  width: 100%;
-  background-color: #e339a7;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  margin-bottom: 0;
-  overflow-x: clip;
-}
-
-body.order hr {
-  border-color: white;
-  background-color: white;
-  border: 0;
-}
-
 body.order {
-  margin: 0 auto;
-  margin-top: -5vh;
+  margin: 0;
 }
 
 /* menu */
@@ -405,8 +420,8 @@ body.order #tagline {
   margin: 20px;
   display: block;
   color: #f5f5f5;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8),
-    0 0 6px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 6px rgba(255, 255, 255, 0.2);
+  letter-spacing: 2px;
 }
 
 /* chalkboard table */
@@ -493,7 +508,7 @@ body.order #coffee_choices .label {
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.8),
     0 0 6px rgba(255, 255, 255, 0.2);
   font-size: 20px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   margin-top: 8px;
   height: 100px;
   padding: 5px 0 50px 0;
@@ -588,52 +603,6 @@ body.order .coffee form::after {
 
 /*-------------------- ABOUT PAGE ------------------------>*/
 
-body.about a[href="#bottomPage"],
-body.about a[href="#title"]{
-   display: block;
-   margin-left: 40px;
-   margin-top: 13px;
-   color: rgb(77, 53, 10);
-}
-
-body.about hr {
-  border-color: white;
-  background-color: white;
-  border: 0;
-}
-
-body.about #banner {
-   display: block;
-   max-height: 200px;
-   width: 100%;
-   object-fit: cover;
-   gap: 0; 
-   z-index: 1;
-}
-
-body.about header #title {
-   position: absolute;
-   top: 18%;
-   left: 2%;
-   z-index: 2;
-   color: white;
-   
-
-   padding: 4px;
-
-   font-family: Garamond, serif;
-   font-size: 60px;
-   text-shadow: 0px 0px 11px black !important;
-
-   
-}
-
-
-body.about {
-   background-color: bisque;
-   overflow-x: clip;
-}
-
 body.about h2 {
    text-align: center;
 
@@ -653,14 +622,6 @@ body.about h2 {
   padding: 10px;
 }
 
-
-body.about br {
-  display: none !important;
-}
-
-body.about hr {
-  display: none !important;
-}
 
 .coffee img[alt="VAB Coffee Shop Logo"] {
    max-height: 180px !important;
