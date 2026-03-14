@@ -250,16 +250,16 @@ body.home .coffee:nth-of-type(2) {
   background-color: rgb(118, 81, 48);
   color: rgb(236, 236, 236);
   margin-left: 680px;
-  width: 58.2%;
+  width: 55.9%;
   padding: 10px;
   z-index: 20;
 }
 /*image container*/
 body.home .coffee:nth-of-type(4) { 
   position: absolute;
-  top: 1475px; 
+  top: 1320px; 
   width: 400px;
-  height: 800px;
+  height: 600px;
   object-fit: cover;
   transform: scale(1.2);
   z-index: 50;
@@ -267,7 +267,7 @@ body.home .coffee:nth-of-type(4) {
 
 body.home .coffee:nth-of-type(4) img { /*image*/
   width: 150%;
-  height: 670px; 
+  height: 470px; 
   box-shadow: 10px 0 15px rgba(0, 0, 0, 0.4);
 }
 
