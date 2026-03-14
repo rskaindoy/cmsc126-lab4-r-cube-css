@@ -31,27 +31,35 @@ Focus on applying proper CSS techniques such as:
 
 
 /* <----------------NAV BAR----------------> */
-.navBar {
-  margin: 0;
-  width: 100%;
-  max-width: 100%;
-  height: 9vh;
-  position: sticky; /* scrolls with the page until threshold */
-  top: 0; /* stays at top*/
-  background-color: #0e2933; /**/
-  display: flex;
-  justify-content: flex-end; /* align links to right */
-  align-items: center; /* center vertically */
-  gap: 50px;
-  padding-right: 30px;
-  z-index: 1000;
-  box-sizing: border-box;
+
+:root{
+  --section: #2c1800;
+  --bg1: #fffdd0;
+  --bg2: #f3f1c7; 
 }
 
-.navBar a {
-  text-decoration: none;
-  font-size: 25px;
-  color: #a5a5a4;
+.navBar{
+   margin: 0;
+   width: 100%;
+   max-width: 100%;
+   height: 9vh;
+   position: sticky; /* scrolls with the page until threshold */
+   top: 0; /* stays at top*/
+   background-color: #0e2933;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+   display: flex;
+   justify-content: flex-end; /* align links to right */
+   align-items: center; /* center vertically */
+   gap: 50px; 
+   padding-right: 30px;
+   z-index: 1000; 
+   box-sizing: border-box;
+}
+
+.navBar a { 
+   text-decoration: none;
+   font-size: 25px;
+   color: #a5a5a4;
 }
 
 /* Hover effect */
@@ -93,6 +101,10 @@ footer p:last-of-type {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
   margin: 10px 0 0 0;
+}
+
+body{
+   background: linear-gradient(to bottom, var(--bg1), var(--bg2), var(--bg1)); /* #1f2a24; #fdf6f0 soft cream background*/ /*#6b3e26 */
 }
 
 /*-------------------- HOME PAGE ------------------------>*/
@@ -151,6 +163,7 @@ body.home #banner {
   width: 139%;
   height: 95vh;
   margin: 0;
+  margin-top:-5vh;
   /*cutout bottom */
   background: #fffdd0;
   border-bottom-right-radius: 50% 100%;
@@ -168,7 +181,7 @@ body.home header #title {
 
 body.home #welcome {
   position: absolute;
-  top: 16%;
+  top: 12%;
   left: 5%;
   max-width: 40%;
   z-index: 20;
@@ -176,7 +189,7 @@ body.home #welcome {
 
 body.home #orderCoffee {
   position: absolute;
-  top: 21%;
+  top: 18%;
   left: 5%;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
@@ -199,10 +212,8 @@ body.home a[href="#bottomPage"] {
 
 body.home {
   margin: 0 auto;
-  background-color: #fffdd0;
-  font-family: "";
-  font-family: "";
-  font-size: 21px;
+  font-family:"";
+  font-size: 23px;
   color: rgb(189, 152, 97);
 }
 
@@ -210,11 +221,12 @@ body.home {
 
 body.home header #title {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 body.home #welcome {
   color: white;
+  font-size: 25px;
 }
 
 /*------------Home elements----------------*/
@@ -265,8 +277,7 @@ body.home .coffee:nth-of-type(4) {
 body.home .coffee:nth-of-type(4) img {
   /*image*/
   width: 150%;
-  height: 660px;
-  height: 470px;
+  height: 480px; 
   box-shadow: 10px 0 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -363,15 +374,6 @@ body.home .coffee:nth-of-type(4) {
 
 /*-------------------- ORDER PAGE ------------------------>*/
 
-:root {
-  --coffee: #5a2a0a;
-  --coffee-dark: #3d1f13;
-  --cream: #fdf6f0;
-  --cyan: #1ea7b6;
-  --pink: #e9687e;
-  --gray: #6e6e6e;
-}
-
 body.order a[href="#bottomPage"] {
   color: white;
   float: left;
@@ -388,10 +390,6 @@ body.order hr {
   border-color: white;
   background-color: white;
   border: 0;
-}
-
-body {
-  background: #fdf6f0; /*linear-gradient(#FDF6F0 0%, #3D1F13 100%); #1f2a24; #fdf6f0 soft cream background*/ /*#6b3e26 */
 }
 
 body.order {
