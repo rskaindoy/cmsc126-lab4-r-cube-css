@@ -884,10 +884,7 @@ body.about .coffee .definition .emphasis {
   font-style: italic;
 }
 
-body.about .definition:nth-of-type(1)  {
-   margin-left: 20%;
-   text-align: center;
-}
+
 
 body.about .label{
    font-family: "Comic Sans MS";
