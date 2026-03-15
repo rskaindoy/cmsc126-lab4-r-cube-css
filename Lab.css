@@ -494,7 +494,6 @@ body.order #coffee_choices td {
 body.order .coffeeImg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 20px;
   border: 6px solid white;
 
@@ -648,7 +647,19 @@ body.about h2 {
 
   z-index: 2;
   border-radius: 50% !important;
+  box-shadow: 0 0 20px black;
 }
+
+/* forces to select specified element AFTER image*/
+body.about .coffee img[alt="VAB Coffee Shop Logo"] ~ p.definition {
+  text-align: center;  
+  margin-left: 20% !important;
+}
+
+/* body.about .coffee:first-of-type p:nth-of-type(1) {
+    text-align: center !important;
+    color: red !important;
+} */
 
 body.about ul {
   list-style-type: none;
@@ -701,9 +712,19 @@ body.about table {
   margin-left: auto;
   margin-right: auto;
   padding: 50px;
-  border-color: rgb(77, 53, 10);
+  border-collapse: separate;
+  /* border-color: rgb(77, 53, 10);
   border-radius: 15px;
-  background-color: #f2e9de;
+  background-color: #f2e9de; */
+
+  background: white;
+
+  border-style: black;
+  border-radius: 10px;
+  border: 12px solid black;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 30px auto;
 }
 
 body.about tbody {
@@ -819,12 +840,21 @@ body.about .coffeeVideo {
 
 body.about img[alt="Aesthetic Coffee"] {
   margin-left: 127px;
-  padding-left: 20px;
+  /* padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 10px; */
+  margin-right: 20px;
+  margin-bottom: 10px;
   float: left;
   height: 560px;
   width: 360px;
+
+  border-radius: 20px;
+  border: 6px solid white;
+
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
 }
 
 body.about .coffee .definition {
@@ -851,4 +881,10 @@ body.about .coffee .definition .emphasis {
 
 body.about .label {
   font-family: "Comic Sans MS";
+}
+
+/* The second .coffee div that contains the etymology information */
+body.about .coffee .definition:nth-of-type(3) {
+    text-align: center !important;
+    color: red !important;
 }
