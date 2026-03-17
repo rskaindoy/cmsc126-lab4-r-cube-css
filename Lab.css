@@ -583,17 +583,6 @@ body.order .coffee form input[type="submit"] {
   letter-spacing: 2px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 25px;
-  width: 100%;
-  background-color: #5a2a0a;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 body.order .coffee form input[type="submit"]:hover {
