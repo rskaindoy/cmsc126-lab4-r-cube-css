@@ -620,22 +620,22 @@ body.about h2 {
 }
 
 .coffee img[alt="VAB Coffee Shop Logo"] {
-  max-height: 180px !important;
-  max-width: 180px !important;
+  max-height: 180px;
+  max-width: 180px;
 
-  float: left !important;
+  float: left;
 
-  margin-left: 50% !important;
-  margin-right: 50% !important;
+  margin-left: 50%;
+  margin-right: 50%;
   position: absolute;
-  padding: none !important;
+  padding: none;
   top: 10%;
   left: 36%;
 
   object-fit: none;
 
   z-index: 2;
-  border-radius: 50% !important;
+  border-radius: 50%;
   box-shadow: 0 0 20px black;
 }
 
@@ -677,18 +677,18 @@ body.about iframe {
 }
 
 body.about .teamMember {
-  min-width: 190px !important;
-  max-height: 180px !important;
-  width: 100% !important;
-  height: 100% !important;
+  min-width: 190px;
+  max-height: 180px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
   background-color: white;
 
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  float: none !important;
-  padding: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
+  float: none;
+  padding: 0;
 }
 
 body.about {
@@ -859,7 +859,7 @@ body.about .coffee .definition {
   font-size: 1.3rem;
   color: #2c1800;
   text-align: justify;
-  text-align-last: left !important;
+  text-align-last: left ;
 }
 
 body.about .coffee .definition .emphasis {
@@ -872,8 +872,3 @@ body.about .label {
   font-family: "Comic Sans MS";
 }
 
-/* The second .coffee div that contains the etymology information */
-body.about .coffee .definition:nth-of-type(3) {
-  text-align: center !important;
-  color: red !important;
-}
