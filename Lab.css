@@ -435,12 +435,9 @@ body.order #tagline {
 /* chalkboard table */
 body.order div:nth-of-type(2) {
   width: 85%;     /* ensures the table spans the width of its container */
-  border-collapse: separate;
-  border-spacing: 20px 10px;
   padding: 0px 30px;
   background: linear-gradient(
-    #1f2a24 0%,
-    #18201b 100%
+    #1f2a24, #18201b
   ); 
   border-radius: 10px;
   border: 12px solid #5a3b1e;
@@ -458,7 +455,6 @@ body.order #coffee_choices .coffeeTitle {
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.4),
     0 0 6px rgba(255, 255, 255, 0.2);
   color: #fff2a8;
-  background: transparent;
   font-size: 42px;
   font-weight: bold;
   letter-spacing: 4px;
@@ -472,7 +468,6 @@ body.order h2 {
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.4),
     0 0 6px rgba(255, 255, 255, 0.2);
   color: #fff2a8;
-  background: transparent;
   font-size: 70px;
   font-weight: bold;
   letter-spacing: 4px;
