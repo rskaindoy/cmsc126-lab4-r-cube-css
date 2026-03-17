@@ -477,7 +477,6 @@ body.order h2 {
 body.order #coffee_choices td {
   width: 14.28%; /* 7 col = 100 / 7 */
   min-width: 150px;
-  max-height: 400px;
   height: 250px;
   text-align: center;
   vertical-align: top;
